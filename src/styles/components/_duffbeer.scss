@@ -1,353 +1,353 @@
 .duffbeer {
-  &__container {
-    position: relative;
-    padding-top: 26px;
-    padding-bottom: 120px;
-    background-color: $color_bg-light;
-    overflow: hidden;
+	&__container {
+		position: relative;
+		padding-top: 26px;
+		padding-bottom: 120px;
+		background-color: $color_bg-light;
+		overflow: hidden;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 2%;
-      right: 0;
-      height: 35%;
-      width: 21%;
-      background-image: url("@images/duffbeer-decor-top.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+		&::before {
+			content: "";
+			position: absolute;
+			top: 2%;
+			right: 0;
+			height: 35%;
+			width: 21%;
+			background-image: url("@images/duffbeer-decor-top.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 26.5%;
-      left: 0;
-      height: 30%;
-      width: 23.5%;
-      background-image: url("@images/duffbeer-decor-bottom.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 26.5%;
+			left: 0;
+			height: 30%;
+			width: 23.5%;
+			background-image: url("@images/duffbeer-decor-bottom.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
 
-  &__title {
-    margin: 0;
-    margin-bottom: 0.5em;
-    font-size: 2.2em;
-    line-height: 1.5em;
-    color: $color_accent;
-    text-transform: uppercase;
-  }
+	&__title {
+		margin: 0;
+		margin-bottom: 0.5em;
+		font-size: 2.2em;
+		line-height: 1.5em;
+		color: $color_accent;
+		text-transform: uppercase;
+	}
 
-  &__description {
-    margin: 0;
-    margin-bottom: 3.4em;
-    line-height: 1.6em;
-    color: $color_text-dark;
-  }
+	&__description {
+		margin: 0;
+		margin-bottom: 3.4em;
+		line-height: 1.6em;
+		color: $color_text-dark;
+	}
 
-  &__content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-  }
+	&__content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-  &__slider-btns {
-    display: none;
-  }
+	&__slider-btns {
+		display: none;
+	}
 
-  .swiper-pagination {
-    display: none;
-  }
+	.swiper-pagination {
+		display: none;
+	}
 
-  &-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 294px;
-    width: 50%;
-    color: $color_white;
-    background-color: $color_numbers;
+	&-card {
+		display: flex;
+		flex-direction: column;
+		min-height: 294px;
+		width: 50%;
+		color: $color_white;
+		background-color: $color_numbers;
 
-    &:nth-child(5n - 2) {
-      align-items: flex-end;
-    }
+		&:nth-child(5n - 2) {
+			align-items: flex-end;
+		}
 
-    &:nth-child(2n) {
-      .duffbeer {
-        &-card {
-          &__text {
-            justify-content: flex-start;
-          }
-        }
-      }
-    }
+		&:nth-child(2n) {
+			.duffbeer {
+				&-card {
+					&__text {
+						justify-content: flex-start;
+					}
+				}
+			}
+		}
 
-    &__image {
-      max-height: 240px;
-      width: 100%;
-      object-position: top;
-    }
+		&__image {
+			max-height: 240px;
+			width: 100%;
+			object-position: top;
+		}
 
-    &__text {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0 40px;
-    }
+		&__text {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin: 0;
+			padding: 0 40px;
+		}
 
-    &--small {
-      background-color: transparent;
+		&--small {
+			background-color: transparent;
 
-      .duffbeer-card {
-        &__content {
-          display: flex;
-          flex-direction: column;
-          max-width: 294px;
-          background-color: $color_accent;
-          flex-grow: 1;
-        }
-      }
-    }
+			.duffbeer-card {
+				&__content {
+					display: flex;
+					flex-direction: column;
+					max-width: 294px;
+					background-color: $color_accent;
+					flex-grow: 1;
+				}
+			}
+		}
 
-    &--number {
-      .duffbeer-card {
-        &__content {
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
+		&--number {
+			.duffbeer-card {
+				&__content {
+					flex-grow: 1;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
 
-        &__image {
-          margin-bottom: 2em;
-          height: 73px;
-          max-width: 100%;
-        }
+				&__image {
+					margin-bottom: 2em;
+					height: 73px;
+					max-width: 100%;
+				}
 
-        &__text {
-          flex-grow: 0;
-          max-width: 100%;
-          text-align: center;
-        }
-      }
-    }
-  }
+				&__text {
+					flex-grow: 0;
+					max-width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1339px) {
-  .duffbeer {
-    &__container {
-      padding-bottom: 140px;
+	.duffbeer {
+		&__container {
+			padding-bottom: 140px;
 
-      &::before {
-        top: 1.7%;
-        right: -26px;
-        height: 35%;
-      }
+			&::before {
+				top: 1.7%;
+				right: -26px;
+				height: 35%;
+			}
 
-      &::after {
-        bottom: 14.8%;
-        left: -2.7%;
-        height: 32%;
-        width: 31%;
-      }
-    }
+			&::after {
+				bottom: 14.8%;
+				left: -2.7%;
+				height: 32%;
+				width: 31%;
+			}
+		}
 
-    &__description {
-      margin-bottom: 1.8em;
-    }
+		&__description {
+			margin-bottom: 1.8em;
+		}
 
-    &-card {
-      width: 53.4%;
+		&-card {
+			width: 53.4%;
 
-      &__image {
-        height: 240px;
-      }
+			&__image {
+				height: 240px;
+			}
 
-      &__text {
-        padding: 0 33px;
-      }
+			&__text {
+				padding: 0 33px;
+			}
 
-      &:nth-child(2n) {
-        max-width: 46.6%;
+			&:nth-child(2n) {
+				max-width: 46.6%;
 
-        .duffbeer-card {
-          &__text {
-            padding: 0 50px;
-          }
-        }
-      }
+				.duffbeer-card {
+					&__text {
+						padding: 0 50px;
+					}
+				}
+			}
 
-      &--number {
-        .duffbeer-card {
-          &__content {
-            padding-bottom: 10px;
-          }
-        }
-      }
-    }
-  }
+			&--number {
+				.duffbeer-card {
+					&__content {
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1019px) {
-  .duffbeer {
-    &__container {
-      padding-top: 25px;
-      padding-bottom: 97px;
+	.duffbeer {
+		&__container {
+			padding-top: 25px;
+			padding-bottom: 97px;
 
-      &::before {
-        top: auto;
-        bottom: 0;
-        right: 0;
-        height: 16%;
-        width: 23%;
-      }
+			&::before {
+				top: auto;
+				bottom: 0;
+				right: 0;
+				height: 16%;
+				width: 23%;
+			}
 
-      &::after {
-        content: none;
-      }
-    }
+			&::after {
+				content: none;
+			}
+		}
 
-    &__title {
-      margin-bottom: 0.7em;
-      font-size: 1em;
-    }
+		&__title {
+			margin-bottom: 0.7em;
+			font-size: 1em;
+		}
 
-    &__description {
-      margin-bottom: 3em;
-      font-size: 0.88em;
-    }
+		&__description {
+			margin-bottom: 3em;
+			font-size: 0.88em;
+		}
 
-    &__content {
-      gap: 25px;
+		&__content {
+			gap: 25px;
 
-      &-item {
-        width: calc(50% - 25px / 2);
-      }
-    }
+			&-item {
+				width: calc(50% - 25px / 2);
+			}
+		}
 
-    &-card {
-      min-height: 292px;
+		&-card {
+			min-height: 292px;
 
-      &:nth-child(2n) {
-        max-width: none;
+			&:nth-child(2n) {
+				max-width: none;
 
-        .duffbeer-card {
-          &__text {
-            padding: 0 10px;
-          }
-        }
-      }
+				.duffbeer-card {
+					&__text {
+						padding: 0 10px;
+					}
+				}
+			}
 
-      &__image {
-        max-height: 238px;
-      }
+			&__image {
+				max-height: 238px;
+			}
 
-      &__text {
-        padding: 0 10px;
-        justify-content: flex-start;
-      }
-    }
+			&__text {
+				padding: 0 10px;
+				justify-content: flex-start;
+			}
+		}
 
-    .swiper {
-      &-pagination {
-        &-bullet {
-          height: 4px;
-          width: 4px;
+		.swiper {
+			&-pagination {
+				&-bullet {
+					height: 4px;
+					width: 4px;
 
-          &s {
-            bottom: 72px;
-          }
+					&s {
+						bottom: 72px;
+					}
 
-          &-active {
-            background: $color_accent;
-          }
-        }
-      }
+					&-active {
+						background: $color_accent;
+					}
+				}
+			}
 
-      &-initialized {
-        padding-right: 25px;
+			&-initialized {
+				padding-right: 25px;
 
-        .duffbeer {
-          &__content {
-            flex-wrap: nowrap;
-            gap: 0;
-          }
-        }
+				.duffbeer {
+					&__content {
+						flex-wrap: nowrap;
+						gap: 0;
+					}
+				}
 
-        & ~ .duffbeer__slider-btns {
-          position: absolute;
-          left: 0;
-          bottom: 45.7%;
-          display: flex;
-          justify-content: space-between;
-          padding-right: 8px;
-          width: 100%;
+				& ~ .duffbeer__slider-btns {
+					position: absolute;
+					left: 0;
+					bottom: 45.7%;
+					display: flex;
+					justify-content: space-between;
+					padding-right: 8px;
+					width: 100%;
 
-          .duffbeer__slider-btn {
-            height: 8px;
-            width: 12px;
+					.duffbeer__slider-btn {
+						height: 8px;
+						width: 12px;
 
-            &-icon {
-              fill: $color_accent;
-            }
-          }
-        }
+						&-icon {
+							fill: $color_accent;
+						}
+					}
+				}
 
-        & ~ .swiper-pagination {
-          display: block;
-        }
-      }
-    }
-  }
+				& ~ .swiper-pagination {
+					display: block;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 699px) {
-  .duffbeer {
-    &__container {
-      padding-right: 21px;
-      padding-bottom: 83px;
+	.duffbeer {
+		&__container {
+			padding-right: 21px;
+			padding-bottom: 83px;
 
-      &::before {
-        right: -73px;
-        height: 19%;
-        width: 61%;
-      }
-    }
+			&::before {
+				right: -73px;
+				height: 19%;
+				width: 61%;
+			}
+		}
 
-    &__title {
-      margin-bottom: 1.1em;
-    }
+		&__title {
+			margin-bottom: 1.1em;
+		}
 
-    &__description {
-      margin-bottom: 0.5em;
-      line-height: 1.3em;
-    }
+		&__description {
+			margin-bottom: 0.5em;
+			line-height: 1.3em;
+		}
 
-    .swiper-initialized {
-      padding-right: 0;
+		.swiper-initialized {
+			padding-right: 0;
 
-      & ~ .duffbeer__slider-btns {
-        bottom: 48.5%;
-        padding-left: 5px;
+			& ~ .duffbeer__slider-btns {
+				bottom: 48.5%;
+				padding-left: 5px;
 
-        .duffbeer__slider-btn {
-          height: 10px;
-          width: 13px;
-        }
-      }
+				.duffbeer__slider-btn {
+					height: 10px;
+					width: 13px;
+				}
+			}
 
-      & ~ .duffbeer__slider-pagination {
-        bottom: auto;
-        top: -9px;
-        left: 15px;
-        text-align: left;
-      }
-    }
-  }
+			& ~ .duffbeer__slider-pagination {
+				bottom: auto;
+				top: -9px;
+				left: 15px;
+				text-align: left;
+			}
+		}
+	}
 }

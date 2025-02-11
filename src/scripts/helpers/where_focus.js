@@ -1,5 +1,5 @@
 export function whereFocus() {
-  document.addEventListener("focusin", function (event) {
-    console.log("Focused element:", document.activeElement);
-  });
+	document.addEventListener("focusin", function (event) {
+		console.log("Focused element:", document.activeElement);
+	});
 }
