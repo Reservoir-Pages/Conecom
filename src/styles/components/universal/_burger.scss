@@ -2,7 +2,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  border: 2px solid $color_red;
+  border: 2px solid $color_white;
   border-radius: 3px;
 
   &__line,
@@ -13,7 +13,7 @@
     left: 5px;
     right: 5px;
     height: 2px;
-    background-color: $color_red;
+    background-color: $color_white;
     transform: rotate(0deg);
     transition: all 0.3s ease;
   }

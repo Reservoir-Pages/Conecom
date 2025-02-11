@@ -1,0 +1,143 @@
+.advantages {
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $color_bg-light;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1.5em;
+    font-size: 2.22em;
+    line-height: 1.5em;
+    color: $color_accent;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 32px;
+    grid-column-gap: 31px;
+  }
+
+  &__slider-btns {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (max-width: 1339px) {
+  .advantages {
+    &__container {
+      padding-top: 81px;
+      padding-bottom: 57px;
+    }
+
+    &__title {
+      margin-bottom: 0.78em;
+    }
+
+    &__list {
+      grid-template-rows: minmax(343px, auto);
+      grid-row-gap: 20px;
+      grid-column-gap: 35px;
+    }
+  }
+}
+
+@media (max-width: 1019px) {
+  .advantages {
+    &__container {
+      position: relative;
+      padding-top: 62px;
+    }
+
+    &__title {
+      margin-bottom: 1em;
+      font-size: 1.11em;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 25px;
+      grid-column-gap: 25px;
+    }
+
+    .swiper {
+      &-pagination {
+        &-bullet {
+          height: 4px;
+          width: 4px;
+
+          &s {
+            bottom: 31px;
+          }
+
+          &-active {
+            background: $color_accent;
+          }
+        }
+      }
+
+      &-initialized {
+        padding-right: 25px;
+
+        .advantages {
+          &__list {
+            display: flex;
+            grid-row-gap: 0px;
+            grid-column-gap: 0px;
+          }
+        }
+
+        & ~ .advantages__slider-btns {
+          position: absolute;
+          left: 0;
+          bottom: 43%;
+          display: flex;
+          justify-content: space-between;
+          padding-right: 3px;
+          width: 100%;
+
+          .advantages__slider-btn {
+            height: 8px;
+            width: 12px;
+
+            &-icon {
+              fill: $color_accent;
+            }
+          }
+        }
+
+        & ~ .swiper-pagination {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .advantages {
+    &__container {
+      padding-top: 52px;
+      padding-right: 21px;
+    }
+
+    & .swiper-initialized {
+      padding-right: 0px;
+
+      & ~ .advantages__slider-btns {
+        bottom: 44%;
+        padding: 0 5px;
+
+        .advantages__slider-btn {
+          width: 15px;
+        }
+      }
+    }
+  }
+}

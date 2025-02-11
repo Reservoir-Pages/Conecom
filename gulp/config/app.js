@@ -45,7 +45,7 @@ export const app = {
     },
     typograf: {
       locale: ["ru", "en-US"],
-      disableRule: ["ru/other/*", "common/punctuation/quote"],
+      disableRule: ["ru/other/*", "common/punctuation/quote", "ru/dash/*"],
     },
     htmlmin: {
       collapseWhitespace: true,

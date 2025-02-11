@@ -9,11 +9,10 @@ export const styles = () => {
       // .pipe(app.plugins.replace(/@images\//g, "../images/"))
       .pipe(app.plugins.sass(app.config.sass).on("error", app.plugins.sass.logError))
       .pipe(app.plugins.autoPrefixer(app.config.autoprefixer))
-      .pipe(app.plugins.gulpIf(app.isProd, app.plugins.groupCssMediaQueries()))
-      //
+      // При объединении медиа-запросов стили переопределяются на общие
+      // .pipe(app.plugins.gulpIf(app.isProd, app.plugins.groupCssMediaQueries()))
       .pipe(app.plugins.gulpIf(app.isProd, app.plugins.webpCss(app.config.webpCss)))
       .pipe(app.plugins.gulpIf(app.isProd && !app.full, app.plugins.cleanCss()))
-      //
       //
       // .pipe(app.plugins.webpCss(app.config.webpCss))
       // .pipe(app.plugins.cleanCss())

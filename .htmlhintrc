@@ -24,7 +24,7 @@
   "inline-script-disabled": true,
   "space-tab-mixed-disabled": true,
   "id-class-ad-disabled": true,
-  "href-abs-or-rel": true,
+  "href-abs-or-rel": false,
   "attr-unsafe-chars": true,
   // OTHER //
   "csslint": true,

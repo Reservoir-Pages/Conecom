@@ -12,7 +12,7 @@
     overflow: hidden;
 
     &:focus-visible + .checkbox__custom {
-      outline: 2px solid $color_red;
+      outline: 2px solid $color_black;
     }
 
     &:checked + .checkbox__custom {

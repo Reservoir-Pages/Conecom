@@ -1,52 +1,73 @@
 import Swiper from "swiper/bundle";
 
-const partnersIndexSwiper = new Swiper(".index .partners__swiper", {
-  loop: true,
-  slidesPerView: 1,
+let initAdvantagesSwiper = false;
+let advantagesSwiper;
+function advantagesSwiperCard() {
+  if (window.innerWidth <= 700) {
+    if (!initAdvantagesSwiper) {
+      initAdvantagesSwiper = true;
+      advantagesSwiper = new Swiper(".advantages__slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
 
-  navigation: {
-    nextEl: ".partners__slider-button--next",
-    prevEl: ".partners__slider-button--prev",
-  },
+        navigation: {
+          nextEl: ".advantages__slider-btn--next",
+          prevEl: ".advantages__slider-btn--prev",
+        },
 
-  breakpoints: {
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
+        pagination: {
+          el: ".advantages__slider-pagination",
+          type: "bullets",
+        },
 
-    769: {
-      slidesPerView: 4,
-      spaceBetween: 15,
-    },
-  },
-});
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+        },
+      });
+    }
+  } else if (initAdvantagesSwiper) {
+    advantagesSwiper.destroy();
+    initAdvantagesSwiper = false;
+  }
+}
+advantagesSwiperCard();
+window.addEventListener("resize", advantagesSwiperCard);
 
-const partnersConferenceSwiper = new Swiper(".conference .partners__swiper", {
-  loop: true,
-  slidesPerView: 1,
+let initDuffbeerSwiper = false;
+let duffbeerSwiper;
+function duffbeerSwiperCard() {
+  if (window.innerWidth <= 700) {
+    if (!initDuffbeerSwiper) {
+      initDuffbeerSwiper = true;
+      duffbeerSwiper = new Swiper(".duffbeer__slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
 
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
+        navigation: {
+          nextEl: ".duffbeer__slider-btn--next",
+          prevEl: ".duffbeer__slider-btn--prev",
+        },
 
-  navigation: {
-    nextEl: ".partners__swiper-button--next",
-    prevEl: ".partners__swiper-button--prev",
-  },
-});
+        pagination: {
+          el: ".duffbeer__slider-pagination",
+          type: "bullets",
+        },
 
-const headerReportSwiper = new Swiper(".header__swiper", {
-  loop: true,
-  slidesPerView: 1,
-
-  pagination: {
-    el: ".header__swiper-pagination",
-  },
-
-  navigation: {
-    nextEl: ".header__swiper-button--next",
-    prevEl: ".header__swiper-button--prev",
-  },
-});
+        breakpoints: {
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+        },
+      });
+    }
+  } else if (initDuffbeerSwiper) {
+    duffbeerSwiper.destroy();
+    initDuffbeerSwiper = false;
+  }
+}
+duffbeerSwiperCard();
+window.addEventListener("resize", duffbeerSwiperCard);

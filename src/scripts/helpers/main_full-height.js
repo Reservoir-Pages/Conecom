@@ -1,9 +1,7 @@
 const main = document.querySelector("main");
 const headerEl = document.querySelector(".header");
 const footerEl = document.querySelector(".footer");
-// const mainInitialHeight = main.offsetHeight;
 let mainInitialHeight = main.clientHeight;
-// let mainInitialHeight = main.scrollHeight;
 
 function getMainHeight() {
   const viewHeight = window.innerHeight;
